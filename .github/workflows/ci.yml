@@ -12,5 +12,7 @@ jobs:
   steps:
   - run: sudo apt update
   - run: sudo apt install -y nodejs
+  - working-directory: ./
   - run: npm install
+  - working-directory: ./
   - run: npm run test
