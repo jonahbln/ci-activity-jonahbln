@@ -14,12 +14,7 @@ jobs:
  build_job:
   runs-on: ubuntu-latest
   steps:
-  - uses: actions/checkout@v3
-
-  - uses: actions/setup-node@v3
-    with:
-      node-version: '16'
-      cache: 'npm'
-      cache-dependency-path: script/validate-data/package-lock.json
+  - run: |
+      npm install
   - name: test
     run: npm run test
