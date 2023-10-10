@@ -12,7 +12,5 @@ jobs:
   steps:
   - run: sudo apt update
   - run: sudo apt install -y nodejs
-  - working-directory: ${{github.workspace}}
-  - run: npm install --include=dev
-  - working-directory: ${{github.workspace}}
+  - run: npm install
   - run: npm run test
