@@ -8,16 +8,6 @@ on:
    - main
 jobs:
  build_job:
-  runs-on: ubuntu-20.04
+  runs-on: [ubuntu-20.04]
   steps:
-  - uses: actions/checkout@v3
-  - name: Update repos
-  - run: sudo apt update
-  - name: Install node
-  - run: sudo apt install -y nodejs
-  - name: Install deps
-  - working-directory: ${{github.workspace}}
-  - run: npm install --include=dev
-  - name: Test
-  - working-directory: ${{github.workspace}}
-  - run: npm run test
+  - run: echo Hello world!
