@@ -1,6 +1,6 @@
 name: CI Activity Tests
 on:
- commit:
+ push:
 branches: [ main ]
  pull_request:
 branches: [ main ]
